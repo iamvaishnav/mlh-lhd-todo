@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from './components/Header/Header';
+import classes from './App.module.scss';
+import List from './components/List/List';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	state = {
+		tasks: [],
+	};
+
+	getInputTask = (data) => {
+		const task = data;
+		let taskArray = this.state.tasks;
+		taskArray.push(task);
+		this.setState(
+			{
+				tasks: taskArray,
+			},
+			() => console.log(this.state)
+		);
+	};
+
+	// handleDeleteTask = () => {
+	//   this.state.tasks.forEach((curr, index) => {
+
+	//   })
+	// };
+	render() {
+		return (
+			<div className={classes.App}>
+				<Header getTask={this.getInputTask} />
+				<div className={classes.container}>
+					{this.state.tasks.map((curr) => (
+						<List todo={curr} key={curr} />
+					))}
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;
