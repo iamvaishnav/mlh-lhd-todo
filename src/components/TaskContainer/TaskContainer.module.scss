@@ -1,0 +1,36 @@
+@import '../../scss/mixins';
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.5);
+	min-width: 60%;
+	transform: translateY(10vh);
+
+	input {
+		padding: 15px 10px;
+		flex-basis: 90%;
+		font-size: 21px;
+		color: #333333;
+		outline: none;
+		border: none;
+		border-radius: 6px 0 0 6px;
+		font-weight: 500;
+	}
+
+	.add {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px;
+		color: #fff;
+		background-color: #159957;
+		border-radius: 0 6px 6px 0;
+		flex-basis: 10%;
+		height: 100%;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,16 @@
+@import '../../scss/mixins';
+
+.banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to bottom, #159957, #155799);
+	height: 35vh;
+	color: #fff;
+	text-align: center;
+
+	& > h1 {
+		margin: 10px;
+	}
+}

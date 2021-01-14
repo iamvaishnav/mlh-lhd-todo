@@ -1,0 +1,15 @@
+.App {
+	min-height: 100vh;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 10vh auto;
+		width: 50%;
+
+		& > div {
+			margin: 14px 0;
+		}
+	}
+}

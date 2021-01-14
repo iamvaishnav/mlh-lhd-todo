@@ -1,0 +1,32 @@
+@import '../../scss/mixins';
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 12px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.5);
+
+	section {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.task {
+		display: flex;
+		flex-wrap: wrap;
+		font-weight: 300;
+		font-size: 18px;
+		margin-left: 20px;
+	}
+
+	.edit {
+		margin-right: 20px;
+		cursor: pointer;
+	}
+	.delete {
+		cursor: pointer;
+	}
+}
